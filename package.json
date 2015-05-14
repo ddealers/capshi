@@ -2,13 +2,11 @@
 	"name": "Capshi",
 	"version": "1.0.0",
 	"description": "Sitio Capshi",
-	"scripts":{
-		"start":"live-server --port=5000",	
-		"css": "stylus css/style.styl > css/style.css",
-		"build":"stylus css/style.styl"
-	},
 	"devDependencies":{
-		"live-server": "latest",
-		"stylus": "latest"
+		"gulp": "latest",
+		"gulp-live-server":"latest",
+		"gulp-stylus":"latest",
+		"gulp-coffee":"latest",
+		"gulp-util":"latest"
 	}
 }
