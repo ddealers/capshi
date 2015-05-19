@@ -1,6 +1,7 @@
-require.config({
-  paths: {
-    jquery: 'lib/jquery/dist/jquery',
-    gsap: 'lib/gsap/src/uncompressed/Tweenmax'
-  }
-});
+$(document).on("ready",
+	function(){
+		$(".icono-terapia").on("click",
+			function(){
+				$("cierre-ventana").css({display: "block"});
+			});
+	});
