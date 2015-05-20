@@ -8,6 +8,7 @@ html{
 	body {
 		height: 100%;
 		width: 100%;
+        font-family: "PT Sans", Helvetica, Arial, sans-serif;  
 		.part-1{
 			position: relative;
 			width: 100%;
@@ -17,13 +18,14 @@ html{
 				position: fixed;
 				width: 100%;
 				list-style: none;
-  				margin: 0;
-  				background: #0b593c; 
-  				display: -webkit-box;
-  				display: -moz-box;
-  				display: -ms-flexbox;
-  				display: -webkit-flex;
-  				display: flex;
+                margin: 0;
+                background: url("/img/fondo-menu.png");
+                background-size: cover;
+                background-repeat: no-repeat;    
+                display: -webkit-box;
+                display: -moz-box;display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
 				-webkit-flex-flow: row wrap;
 				justify-content: flex-end;
 				z-index: 2;
@@ -35,7 +37,7 @@ html{
   				color: white;
   				font-family: arial;
   				text-align: center; 
-    			padding: 12px;
+    			padding: 15px;
 			}
 			.navigation a:hover {
   				background: darken(#1BA641, 2%);
@@ -143,14 +145,17 @@ html{
 				}
 				.icono-terapia{
 					width: 150px;
-					height: auto;
+					height: auto;   
+					img{
+						width: 78%;
+					}
 				}
 				.im-fixed-2{
 				position: relative;
 				width: 100%;
 				height: 300px;
 				top: 20px;
-				background: url("/img/familia-feliz.jpg") center fixed;
+				background: url("/img/familia-feliz-1.jpg") center fixed;
 				background-repeat: no-repeat;
 				background-size: cover;
 				}
@@ -184,24 +189,25 @@ html{
 					background-size: cover;
 				}
 				.info-terapias{
-					//display: flex;
   					width: 90%;
   					top: 110px;
   					height: 300px;
   					position: fixed;
   					z-index: 2;
-  					background-color: #f00;
   					right: 64px;
   					display: none;
-  					.cierre-ventana{
-  						.im-cierre{
-  							width: 31px;
-  							position: relative;
-  							bottom: 7px;
-  							left: 1112px;
-  							top: 9px;
+            background: url("/img/fondo.contenido1.png");
+            background-repeat: repeat-x y;    
+  					.im-cierre{
+  						width: 40px;
+  					 height: 40px;
+ 						 left: 1109px;
+ 						position: relative;
+ 						top: 9px;
+  						.close{
+  							width: 34px;
   						}
-					}
+  					}		
   					.titulo-terapia{
   						position: relative;
   						width: 100%;
@@ -232,9 +238,9 @@ html{
 		}		
 		.part-3{
 			width: 100%;
-			height: 100%;	
+			height: 60%;	
 			position: relative;
-			.contacto{
+			.agenda-cita{
 				position: relative;
 				width: 100%;
 				height: auto;
@@ -270,10 +276,40 @@ html{
   			}	
 			#sillon{
 				width: 14%;
-  				margin: auto;
-  				margin-top: 130px;
-  				margin-left: 43%;
-			}	
-		}
+  			margin: auto;
+  			margin-top: 130px;
+  			margin-left: 43%;
+			}
+    }  
+    .contacto{
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      background: url("/img/cont-back.png");
+      background-size: cover;
+    }     
 	}	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
