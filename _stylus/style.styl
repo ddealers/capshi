@@ -40,7 +40,8 @@ html{
     			padding: 15px;
 			}
 			.navigation a:hover {
-  				background: darken(#1BA641, 2%);
+  				color: darken(#448C42, 2%);
+                text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);                  
 			}
 			.container-part-1{
 				justify-content: center;
@@ -57,239 +58,285 @@ html{
   					width: 100%;
   					position: relative;
   					text-align: center;
-  					font-family: cursive;
   					font-size: 22px;
   						
   				}
   			}
 		}
 		.part-2{
-			display: flex;
 			position: relative;	
 			width: 100%;
 			height: 100%;
+            background: url("/img/manos-fam.png") center fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
 			.quienes-somos{	
-				position: relative;
-				width 100%;
-				height: 300px;
+                display: flex;         
+                position: relative;
+                width: 550px;
+                height: 550px;
+                border-radius: 50%;
+                background: rgba(0,0,0,0.69);
+                padding: 10px;
+                top: 70px;    
+                margin: auto;    
 				#logo{
-					position: relative;
-					left: 43%;
-	 				width: 130px;
-	 				height: 130px;
-	 				padding: 0;
-	 				top: 60px;
+					position: absolute;
+                    left: 36%;
+                    width: 160px;
+                    height: 160px;
+                    padding: 0;
+                    top: 60px;
+                    border-radius: 50%;
+                    border: solid 3px #fff              
 				}
 				#tex-3{
-				  	top: 70px;
-  					width: 80%;
-  					margin: auto;
-  					position: relative;
-  					font-size: 18px;
-  					text-align: justify;
+                    position: relative;
+                    top: 50px;
+                    width: 80%;
+                    text-align: justify;
+                    font-size: 18px;
+                    color: #fff;
+                    margin: auto;
 				}
-				.im-fixed-1{
-					position: relative;
-					width: 100%;
-  					height: 300px;
-  					margin-top: 100px;
-  					background: url("/img/manos-fam.png")center fixed;
-  					background-repeat: no-repeat;
-  					background-size: cover;
-				}
-				.terapias{
-					position: relative
-					width: 90%;
-					height: 600px;
-					margin: auto;
-					top: 10px;
-					h1{
-						position: relative;
-  						text-align: center;
-  						width: 100%;
-  						font-size: 40px;
-					}
-					h2{
-						position: relative;
-  						text-align: center;
-  						width: 100%;
-  						font-size: 25px;
-  						top: 10px;
-					}
-					p{
-						position: relative;
-						width: 100%;
-						top: 50px;
-						font-size: 20px;
-					}			
-				}
-				.flex-container-des-humano{
-  					padding: 0;
-  					margin: 0;
-  					list-style: none;
-  					display: -webkit-box;
-  					display: -moz-box;
-  					display: -ms-flexbox;
-  					display: -webkit-flex;
-  					display: flex;
-  					-webkit-flex-flow: row wrap;
-  					justify-content: space-around;
-				}
-				.flex-item-des-humano {
-  					padding: 5px;
-  					width: 200px;
-  					height: 180px;
-  					margin-top: 80px;
-  					font-size:20px;
-  					text-align: center;
-				}
-				.icono-terapia{
-					width: 150px;
-					height: auto;   
-					img{
-						width: 78%;
-					}
-				}
-				.im-fixed-2{
-				position: relative;
-				width: 100%;
-				height: 300px;
-				top: 20px;
-				background: url("/img/familia-feliz-1.jpg") center fixed;
-				background-repeat: no-repeat;
-				background-size: cover;
-				}
-				.flex-container-ter-alter{
-					padding: 0;
-  					margin: 0;
-  					list-style: none;
-  					display: -webkit-box;
-  					display: -moz-box;
-  					display: -ms-flexbox;
-  					display: -webkit-flex;
-  					display: flex;
-  					-webkit-flex-flow: row wrap;
-  					justify-content: space-around;
-				}
-				.flex-item-ter-alte {
-  					padding: 5px;
-  					width: 200px;
-  					height: 180px;
-  					margin-top: 80px;
-  					font-size:20px;
-  					text-align: center;
-				}
-				.im-fixed-3{
-					position: relative;
-					width: 100%;
-					height: 300px;
-					top: 20px;
-					background: url("/img/fondo2.jpg") center fixed;
-					background-repeat: no-repeat;
-					background-size: cover;
-				}
-				.info-terapias{
-  					width: 90%;
-  					top: 110px;
-  					height: 300px;
-  					position: fixed;
-  					z-index: 2;
-  					right: 64px;
-  					display: none;
-            background: url("/img/fondo.contenido1.png");
-            background-repeat: repeat-x y;    
-  					.im-cierre{
-  						width: 40px;
-  					 height: 40px;
- 						 left: 1109px;
- 						position: relative;
- 						top: 9px;
-  						.close{
-  							width: 34px;
-  						}
-  					}		
-  					.titulo-terapia{
-  						position: relative;
-  						width: 100%;
-  						height: 40px;
-  						text-align: center;
-  						margin-top: 40px;
-  						font-size: 30px;
-  					}
-					.cont-terapia{
-						width: 95%;
-  						height: auto;
-  						position: relative;
-  						top: 30px;
-  						text-align: justify;
-  						padding: 17px;
-  						font-size: 18px;
-					}
-				}	
-				#tex-4{
-					top: 66px;
-  					width: 85%;
-  					margin: auto;
-  					position: relative;
-  					font-size: 18px;
-					text-align: justify;
-				}
-			}
-		}		
-		.part-3{
-			width: 100%;
-			height: 60%;	
-			position: relative;
-			.agenda-cita{
-				position: relative;
-				width: 100%;
-				height: auto;
-				display: flex;
-				#tex-5{
-					width: 54%;
-  					font-size: 18px;
-  					height: auto;
-  					top: 123px;
-  					left: 83px;
-  				}
-				input{
-					top: 110px;
-					position: relative;
-  					width: 270px;
-  					height: 45px;
-  					font-size: 16px;
-  					font-weight: 400;
-  					border-radius: 14px;
-  					outline: 0;
-  					border-bottom: 1px solid #fff;
-  					padding: 0px 10px;
-  					font-family: arial;
-  					left: 27px;
-  				}
-  				.boton{
-  					position: relative;
-  					top: 109px;
-  					left: 65px;
-  					width: 90px;
-  					border-radius: 12px;
-  				}
-  			}	
-			#sillon{
-				width: 14%;
-  			margin: auto;
-  			margin-top: 130px;
-  			margin-left: 43%;
-			}
-    }  
-    .contacto{
-      position: absolute;
-      width: 100%;
-      height: 200px;
-      background: url("/img/cont-back.png");
-      background-size: cover;
+            }
+        }
+        .part-3{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url("/img/fondo2.jpg") center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            .que-ofrecemos{
+                position: relative;
+                width: 550px;
+                height: 550px;
+                border-radius: 50%;
+                background: rgba(0,0,0,0.69);
+                padding: 10px;
+                top: 80px;    
+                margin: auto;
+                #tex-4{
+                    position: relative;
+                    top: 110px;
+                    width: 80%;
+                    text-align: justify;
+                    padding: 51px;
+                    font-size: 18px;
+                    color: white;
+                }
+            }
+        }
+        .servicios{
+            position: relative;
+            width: 100%;
+            height: 101%;
+            display: flex;
+            h1 {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                font-size: 45px;
+                top: 50px;
+            }
+            #des-humano{
+                position: absolute;
+                width: 100%;
+                height:10px;
+                top: 130px;
+                font-size: 17px;
+                padding: 16px;
+            }           
+            .flex-container-des-humano {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                justify-content: center;
+                width: 100%;
+                position: absolute;
+                top: 180px;
+                left: 40px;
+            }
+            .flex-item-ter-alte {
+                width: 200px;
+                height: 150px;
+            }
+            .icono-terapia{
+                width: 100px;  
+                img {
+                    width: 50%;
+                }
+            }
+            #te-alternas{
+                position: absolute;
+                width: 100%;
+                top: 300px;
+                font-size: 17px;
+                padding: 16px;
+            }
+            .flex-container-ter-alter{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                justify-content: center;
+                width: 100%;
+                position: absolute;
+                top: 380px;
+                left: 40px;
+                img {
+                    width: 50%;
+                }
+            }
+            .fondo-rgba{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background: rgba(0,0,0,0.8);
+                z-index: 1;
+                top: 0;
+                left: 0;
+                display: none;
+                .info-terapias{
+                    width: 550px;
+                    height: 550px;
+                    border-radius: 50%;
+                    z-index: 2;
+                    background: url("/img/fondo.contacto1.png") no-repeat center;
+                    background-size: cover;
+                    top: 100px;
+                    margin: auto;
+                    position: relative;
+                    .im-cierre{
+                        position: absolute;
+                        width: 100px;
+                        left: 250px;
+                        top: 15px;
+                        img {
+                            width: 60%;
+                        }
+                    }     
+                    .titulo-terapia{
+                        position: relative;
+                        width: 70%;
+                        font-size: 34px;
+                        top: 87px;
+                        margin: auto;
+                    }
+                    .cont-terapia{
+                        position: absolute;
+                        width: 80%;
+                        height: 200px;
+                        text-align: justify;
+                        top: 200px;
+                        left: 56px; 
+                        overflow: scroll;
+                    }    
+                }
+            }           
+        }       
+    }
+}                
+    /*.contacto{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: url("/img/cont-back.png");
+        background-size: cover;
+        display: flex;
+        top: 130px;
+        #tit-contacto {
+            position: absolute;
+            width: 100%;
+        }
+        #tex-contacto{
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            font-size: 17px;
+            text-align: center;
+        }
+        .formulario{
+            position: relative;
+            width: 100%;
+            height: 230px;
+            margin-top: 110px;
+            display: flex;
+            #nombre {
+                position: relative;
+                width: auto;
+                top: 7px;
+                font-size: 20px;
+                left: 30px;       
+            }
+            input {
+                position: relative;
+                width: 25%;
+                height: 28px;
+                border-radius: 10px;
+                outline: 0;
+                border-bottom: 1px solid #fff;
+                padding: 0 10px;
+                font-size: 16px;
+                font-family: "PT Sans",Helvetica,Arial,sans-serif;
+                color: #448c42;
+            }
+            #name-form{
+                left: 70px;
+            }
+            #mail{
+                position: absolute;
+                width: auto;
+                top: 60px;
+                font-size: 20px;
+                left: 30px;      
+            }
+            #mail-form{
+                top: 55px;
+                right: 242px;
+            }
+            #terapia-interes{
+                position: absolute;
+                width: auto;
+                top: 115px;
+                font-size: 20px;
+                left: 30px;
+            }
+            select {
+                position: relative;
+                display: block;
+                top: 120px;
+                right: 430px;
+                height: 190px;
+                width: 187px;
+            }
+            #boton-enviar{
+                position: relative;
+                width: 130px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 15px;
+                background: #438941;
+                top: 170px;
+                right: 740px;
+                cursor: pointer;
+            } 
+        }   
     }     
 	}	
-}
+}*/
 
 
 
