@@ -131,4 +131,22 @@ $(document).on("ready",
 				e.preventDefault();
 				$(".ter-aromaterapia").css({display: "none"});
 			});
+		$("#im-tel").on("mouseover",
+			function(){
+				$("#num").css({display: "block"});			
+			});
+		$("#im-tel").on("mouseleave",
+			function(){
+				$("#num").css({display: "none"});
+			});
 });
+
+
+
+
+
+
+
+
+
+
