@@ -13,8 +13,9 @@ html{
 			position: relative;
 			width: 100%;
 			height: 100%;
-			background-image: url(/img/Family_Transparent1.png);
-            background-repeat: no-repeat;         
+			background: url("/img/Family_Transparent1.png") center;
+            background-repeat: no-repeat;
+            background-size: cover;
 			.navigation {
 				position: fixed;
 				width: 100%;
@@ -48,7 +49,7 @@ html{
 				justify-content: center;
 				width: 100%;
 				position: relative;
-				top: 150px;
+				top: 90px;
   				height: auto;
   				#tex-1{
   					font-family: arial;
@@ -59,8 +60,7 @@ html{
   					width: 100%;
   					position: relative;
   					text-align: center;
-  					font-size: 22px;
-  						
+  					font-size: 22px;			
   				}
   			}
 		}
@@ -71,6 +71,7 @@ html{
             background: url("/img/manos-fam.png") center fixed;
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
 			.quienes-somos{	
                 display: flex;         
                 position: relative;
@@ -164,7 +165,6 @@ html{
                 width: 100%;
                 position: absolute;
                 top: 180px;
-                left:10%;
             }
             .flex-item-ter-alte {
                 width: 200px;
@@ -174,7 +174,7 @@ html{
                 width: 100px;  
                 img {
                     width: 50%;
-                }
+                }   
             }
             #te-alternas{
                 position: absolute;
@@ -191,14 +191,12 @@ html{
                 display: -moz-box;
                 display: -ms-flexbox;
                 display: -webkit-flex;
-                display: flex;
                 -webkit-flex-flow: row wrap;
                 justify-content: center;
                 width: 100%;
                 position: absolute;
                 top: 360px;
                 height: 300px;
-                left: 3%;
                 img {
                     width: 50%;
                 }
@@ -323,18 +321,19 @@ html{
                     color: #4ba55b;
                 }
                 #boton-enviar{
-                    position: absolute;
+                    position: relative;
                     width: 100px;
                     background-color: #4ba55b;
                     height: 20px;
                     border-radius: 10px;
-                    top: 250px;
-                    right: 270px;
+                    top: 60px;
+                    right: -18px;
                     text-decoration: none;
                     color: #fff;
                     text-align: center;
                     margin: auto;
                     padding: 9px;
+                    right: 13%;
                 }
                 #telefono {
                     width: 150px;
@@ -396,6 +395,7 @@ html{
                     position: absolute;
                     top: 0;
                     right: 12px;
+                    z-index: 1;
                     color: #4ba55b;
                     line-height: 40px;
                     font-size: 18px;       
@@ -409,6 +409,7 @@ html{
                     outline: none;
                     color: #4ba55b;
                     cursor: pointer;
+                    z-index: 2;
                     border: none;
                     padding: 10px 10px 10px 5px;
                     text-overflow: '';
@@ -446,132 +447,10 @@ html{
                 }
                 .column-6 {
                     position: absolute;
-                    top: 55%;
-                    left: 42%;
-                    margin: -20px 0 0 -150px;
-                    width: 312px;
+                    top: 50%;
+                    width: 52%;
                 }     
             }   
         }          
     }   
 }                
-   
-       /*#list-terapias{
-                    width: 200px;
-                    position: absolute;
-                    font-size: 30px;
-                    top: 195px;
-                    right: 225px;
-                }*/
-
-    /*.contacto{
-        position: relative;
-        width: 100%;
-        height: auto;
-        background: url("/img/cont-back.png");
-        background-size: cover;
-        display: flex;
-        top: 130px;
-        #tit-contacto {
-            position: absolute;
-            width: 100%;
-        }
-        #tex-contacto{
-            position: absolute;
-            width: 100%;
-            height: 10px;
-            font-size: 17px;
-            text-align: center;
-        }
-        .formulario{
-            position: relative;
-            width: 100%;
-            height: 230px;
-            margin-top: 110px;
-            display: flex;
-            #nombre {
-                position: relative;
-                width: auto;
-                top: 7px;
-                font-size: 20px;
-                left: 30px;       
-            }
-            input {
-                position: relative;
-                width: 25%;
-                height: 28px;
-                border-radius: 10px;
-                outline: 0;
-                border-bottom: 1px solid #fff;
-                padding: 0 10px;
-                font-size: 16px;
-                font-family: "PT Sans",Helvetica,Arial,sans-serif;
-                color: #448c42;
-            }
-            #name-form{
-                left: 70px;
-            }
-            #mail{
-                position: absolute;
-                width: auto;
-                top: 60px;
-                font-size: 20px;
-                left: 30px;      
-            }
-            #mail-form{
-                top: 55px;
-                right: 242px;
-            }
-            #terapia-interes{
-                position: absolute;
-                width: auto;
-                top: 115px;
-                font-size: 20px;
-                left: 30px;
-            }
-            select {
-                position: relative;
-                display: block;
-                top: 120px;
-                right: 430px;
-                height: 190px;
-                width: 187px;
-            }
-            #boton-enviar{
-                position: relative;
-                width: 130px;
-                height: 30px;
-                font-size: 14px;
-                border-radius: 15px;
-                background: #438941;
-                top: 170px;
-                right: 740px;
-                cursor: pointer;
-            } 
-        }   
-    }     
-	}	
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
