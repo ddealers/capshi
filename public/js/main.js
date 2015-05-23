@@ -221,6 +221,42 @@ $(document).on("ready",
 			TweenLite.to('#home', 0.5, {opacity:1});
 		}});
 	});
+//------------	//------------	VALIDACION FORM //------------	//------------
+$('#form').submit(function(event) {
+		var $form	= $(this);
+		var name 	= $("#form-name").val();
+		var mail 	= $form.find("#form-mail").val();
+		var nameIsString	= /[A-Za-z\ ]+/.test(name);
+		var emailIsValid	= /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/igm.test(email);
+
+		if(!name || !nameIsString){
+			$("#form-name").addClass("rojo");
+			$("form-name").val("");
+			$("#dat-obli").css({display: "block"});
+			return false;
+		}else{
+			$("#dat-obli").css({display: "none"});
+		}
+		if(!email|| !emailIsValid){
+			$("#form-mail").addClass("rojo");
+			$("#form-mail").val("");
+			$(".incorrecto").css({display: "block"});
+			$(".vacio").css({display: "none"});
+			$(".correcto").css({display: "none"});
+			$("#dat-obli").css({display: "block"});
+			return false;
+		}else{
+			$(".correcto").css({display: "block"});
+			$(".vacio").css({display: "none"});
+			$(".incorrecto").css({display: "none"});
+			$("#dat-obli").css({display: "none"});
+		}
+
+		$form.find('boton').prop('disabled', true);
+		return false;
+	});
+
+
 //------------	//------------	FOOTER ICONS //------------	//------------
 	$('.titleSocial').on('mouseover', function(){
 		TweenLite.to('.iconSocial', 0.2, {y: 0, bottom: 0, opacity:1});

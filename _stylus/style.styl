@@ -185,7 +185,7 @@ html{
             .que-ofrecemos{
                 position: relative;
                 width: 550px;
-                height: 600px;
+                height: 550px;
                 border-radius: 50%;
                 background: rgba(0,0,0,0.69);
                 padding: 10px;
@@ -355,12 +355,11 @@ html{
                     @media screen and (max-width 640px){
                         border-radius: 0;
                         width: 80%;
-                        bottom: 2px;
-                        height: 80%;
+                        height: 75%;
                         position: absolute;
                         left: 0;
                         right: 0;
-                        margin: 0;
+                        top: 60px;
                     } 
                     .im-cierre{
                         position: absolute;
@@ -373,7 +372,7 @@ html{
                             left: 0;
                             right: 0;
                             margin: auto;
-                            padding-left: 30px;
+                            padding-left: 40px;
                         }
                         img {
                             width: 60%;
@@ -385,6 +384,9 @@ html{
                         font-size: 34px;
                         top: 87px;
                         margin: auto;
+                        @media screen and (max-width: 640px){
+                            top: 20px;
+                        }
                     }
                     .cont-terapia{
                         position: absolute;
@@ -394,6 +396,17 @@ html{
                         top: 200px;
                         left: 56px; 
                         overflow: scroll;
+                        @media screen and (max-width: 640px){
+                            position: absolute;
+                            width: 80%;
+                            height: 200px;
+                            text-align: left;
+                            top: 230px;
+                            overflow: scroll;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                        }
                     }    
                 }
             }           
@@ -407,7 +420,7 @@ html{
             background: url("/img/fondo.menu1.png");
             background-size: cover;
             @media screen and (max-width: 640px){
-                height: 700px;
+                height: 100%;
             }
             #tit-contacto {
                 position: absolute;
@@ -415,6 +428,9 @@ html{
                 text-align: center;
                 top: 100px;
                 font-size: 40px;
+                @media screen and (max-width: 640px){
+                    top: 60px;
+                }
             }
             #tex-contacto{
                 position: absolute;
@@ -423,6 +439,9 @@ html{
                 font-size: 17px;
                 text-align: center;
                 top: 160px;
+                @media screen and (max-width: 640px){
+                    top: 100px;
+                }
             }
             .formulario{
                 position: absolute;
@@ -435,6 +454,7 @@ html{
                 margin: auto;
                 @media screen and (max-width: 640px){
                         width: 70%;
+                        top: 200px;
                     }
                 #name-form{
                     position: relative;
@@ -457,8 +477,12 @@ html{
                     color: #4ba55b;
                     left: 0;
                     right: 0;
+                    .rojo{
+                        -webkit-input-placeholder: red;
+                    }
                     @media screen and (max-width: 640px){
                         width: 100%;
+                        top: 20px;
                     }
                 }
                 #mail-form{
@@ -483,8 +507,12 @@ html{
                     left: 0;
                     right: 0;
                     margin: auto;
+                    .rojo{
+                        -webkit-input-placeholder: red;
+                    }
                     @media screen and (max-width: 640px){
                         width: 100%;
+                        top: 90px
                     }
                 }
                 #boton-enviar{
@@ -501,6 +529,32 @@ html{
                     text-align: center;
                     margin: auto;
                     padding: 9px;
+                    @media screen and (max-width: 640px){
+                        top: 140px;
+                    }
+                }    
+                #dat-obli{
+                    width: 100%;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    text-align: center;
+                    top: 170px;
+                    display: none;
+                    color: red;
+                    @media screen and (max-width: 640px){
+                        width: 100%;
+                        position: absolute;
+                        display: block;
+                        color: red;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        top: 136px;
+                        display: block;
+                        font-size: 14px;
+                    }
                 }
                 #telefono {
                     width: 150px;
@@ -619,6 +673,7 @@ html{
                     width: 50%;
                     @media screen and (max-width: 640px){
                         width: 263px;
+                        top:160px;
                     }
                 }     
             }
@@ -628,6 +683,9 @@ html{
                 bottom: 0;
                 width: 100%;
                 height: 85px;
+                @media screen and (max-width: 640px){
+                    bottom 0px;
+                }
                 .social{
                     text-align: center;
                     padding-top: 30px;
@@ -648,7 +706,7 @@ html{
                 height: 85px;
                 display: none;
                 @media screen and (max-width: 640px){
-                        height: 280px;
+                        height: 250px;
                     }
                 .center{
                     width: 1100px;
@@ -679,7 +737,7 @@ html{
                         }
                         @media screen and (max-width: 768px){
                             padding: 0px;
-                        }
+                        }    
                         a {
                             text-decoration: none;
                             .phone{
@@ -690,6 +748,15 @@ html{
                                 background-size: 45px;
                                 color: #fff;
                                 padding-left: 87px;
+                                @media screen and (max-width: 640px){
+                                    width: 100%;
+                                    margin: auto;
+                                    background: url("../img/icono-call.png") no-repeat 7% 20px;
+                                    background-size: 40px;
+                                    left: 0;
+                                    right: 0;
+                                    top: 70px;
+                                }
                             }
                             .face{
                                 text-align: center;
@@ -698,6 +765,13 @@ html{
                                 background: url("../img/social-facebook.png") no-repeat 0% 20px;
                                 background-size: 20px;
                                 color: #fff;
+                                @media screen and (max-width: 640px){
+                                    display: block;
+                                    margin-left: 40%;
+                                    width: 100%;
+                                    background: url("../img/social-facebook.png") no-repeat 14% 20px;
+                                    background-size: 20px;
+                                }
                             }
                             .ubicacion{
                                 text-align: right;
@@ -707,6 +781,11 @@ html{
                                 background-size: 26px;
                                 color: #fff;
                                 padding-left: 40px;
+                                @media screen and (max-width: 640px){
+                                    margin-top: 0px;
+                                    display: block;
+                                    margin-left: 48%;
+                                }    
                             }
                         }    
                     }
