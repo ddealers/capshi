@@ -1,25 +1,24 @@
 *{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 html{
-	height: 100%;
-	width: 100%;
-	body {
-		height: 100%;
-		width: 100%;
+    height: 100%;
+    width: 100%;
+    body {
+        height: 100%;
+        width: 100%;
         font-family: "PT Sans", Helvetica, Arial, sans-serif;  
-		.part-1{
-			position: relative;
-			width: 100%;
-			height: 100%;
-			background: url("/img/Family_Transparent1.png") center;
-            background-repeat: no-repeat;
-            background-size: cover;
-			.navigation {
-				position: fixed;
-				width: 100%;
-				list-style: none;
+        .part-1{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url("/img/Family_Transparent1.png")no-repeat;
+            background-size: cover;     
+            .navigation {
+                position: fixed;
+                width: 100%;
+                list-style: none;
                 margin: 0;
                 background: url("/img/fondo-menu.png");
                 background-size: cover;
@@ -28,51 +27,96 @@ html{
                 display: -moz-box;display: -ms-flexbox;
                 display: -webkit-flex;
                 display: flex;
-				-webkit-flex-flow: row wrap;
-				justify-content: flex-end;
-				z-index: 2;
-			}
-			.navigation a {
-  				text-decoration: none;
-  				display: block;
-  				padding: 1em;
-  				color: white;
-  				font-family: arial;
-  				text-align: center; 
-    			//padding: 15px;
-			}
-			.navigation a:hover {
-  				color: darken(#448C42, 2%);
+                -webkit-flex-flow: row wrap;
+                justify-content: flex-end;
+                z-index: 2;
+                box-shadow: -7px -1px 21px;
+                @media screen and (max-width: 1024px){
+                    width: 100%;
+                }
+                @media screen and (max-width: 768px){
+                    width: 100%;
+                }
+                @media screen and (max-width: 640px){
+                    width: 100%;
+                    height: 50px;
+                }            
+            }
+            .navigation a {
+                text-decoration: none;
+                display: block;
+                padding: 1em;
+                color: white;
+                font-family: arial;
+                text-align: center; 
+                //padding: 15px;
+            }
+            .navigation a:hover {
+                color: darken(#448C42, 2%);
                 text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);                  
-			}
-			.container-part-1{
-				justify-content: center;
-				width: 100%;
-				position: relative;
-				top: 90px;
-  				height: auto;
-  				#tex-1{
-  					font-family: arial;
-  					font-size: 40px;
-  					text-align: center;
-  				}
-  				#tex-2{
-  					width: 100%;
-  					position: relative;
-  					text-align: center;
-  					font-size: 22px;			
-  				}
-  			}
-		}
-		.part-2{
-			position: relative;	
-			width: 100%;
-			height: 100%;
+            }
+            .container-part-1{
+                justify-content: center;
+                width: 100%;
+                position: relative;
+                top: 150px;
+                height: auto;
+                @media screen and (max-width: 640px){
+                      top: 120px;  
+                }
+                .title{
+                    font-size: 45px;
+                    text-align: left;
+                    margin-left: 40px;
+                    width: 45%;
+                    line-height: 47px;
+                    color: #308C6A;
+                    padding-top: 100px;
+                    font-family: avenir;
+                    font-weight: bold;
+                    border-bottom: 1px solid;
+                    padding-bottom: 10px;
+                    @media screen and (max-width: 640px){
+                        width: 80%;
+                        font-size: 40px;
+                        text-align: center;
+                        padding-top: 0px;
+                        line-height: 50px;
+                    }
+                }          
+                #tex-1{
+                    font-size: 42px;
+                    text-align: left;
+                    padding-left: 40px;
+                    width: 45%;
+                    line-height: 47px;
+                    color: #1d4a53;
+                    padding-top: 10px;
+                    font-family: avenir;
+                    font-weight: 100;
+                    padding-bottom: 20px;
+                    @media screen and (max-width: 640px){
+                        font-size: 30px;
+                        text-align: center;
+                        width: 80%;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+        .part-2{
+            position: relative; 
+            width: 100%;
+            height: 100%;
             background: url("/img/manos-fam.png") center fixed;
             background-repeat: no-repeat;
             background-size: cover;
-            display: flex;
-			.quienes-somos{	
+            box-shadow: inset 0 1px 10px rgba(0,0,0,0.5),inset 0 -1px 10px rgba(0,0,0,0.5);
+            @media screen and (max-width: 640px){
+                background-imge: url("/img/manos-fam.png") center;
+                background-repeat: no-repeat;
+            }
+            .quienes-somos{ 
                 display: flex;         
                 position: relative;
                 width: 550px;
@@ -81,18 +125,33 @@ html{
                 background: rgba(0,0,0,0.69);
                 padding: 10px;
                 top: 70px;    
-                margin: auto;    
-				#logo{
-					position: absolute;
+                margin: auto; 
+                @media screen and (max-width: 640px){
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    top: 0;
+                    overflow: hidden;
+                    position: relative;
+                    padding: 0px;
+                }   
+                #logo{
+                    position: absolute;
                     left: 36%;
                     width: 160px;
                     height: 160px;
                     padding: 0;
                     top: 60px;
                     border-radius: 50%;
-                    border: solid 3px #fff              
-				}
-				#tex-3{
+                    border: solid 3px #fff
+                    @media screen and (max-width: 640px){
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        margin-bottom: 15px;
+                    }              
+                }
+                #tex-3{
                     position: relative;
                     top: 50px;
                     width: 80%;
@@ -100,26 +159,52 @@ html{
                     font-size: 18px;
                     color: #fff;
                     margin: auto;
-				}
+                    @media screen and (max-width: 640px){
+                        position: absolute;
+                        left: 7%;
+                        top: 250px;
+                        width: 80%;
+                        text-align: left;
+                        line-height: 25px;  
+                    }
+                }
             }
         }
         .part-3{
             position: relative;
             width: 100%;
             height: 100%;
-            background: url("/img/fondo2.jpg") center fixed;
+            background: url("../img/fondo22.jpg") 0px -164px fixed;
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
+            @media screen and (max-width: 768px){
+                background: url("../img/fondo22.jpg") center fixed;
+                height: 700px;
+            }
             .que-ofrecemos{
                 position: relative;
                 width: 550px;
-                height: 550px;
+                height: 600px;
                 border-radius: 50%;
                 background: rgba(0,0,0,0.69);
                 padding: 10px;
                 top: 30px;  
                 margin: auto;
+                @media screen and (max-width: 640px){
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    top: 0px;
+                }
+                .serv{
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 45px;
+                    top: 60px;
+                    color: #308c6a;
+                }
                 #tex-4{
                     position: relative;
                     top: 110px;
@@ -128,6 +213,12 @@ html{
                     padding: 51px;
                     font-size: 18px;
                     color: white;
+                    @media screen and (max-width: 640px){
+                        text-align: left;
+                        width: 80%;
+                        padding: 20px;
+                        line-height: 25px;
+                    }
                 }
             }
         }
@@ -136,20 +227,30 @@ html{
             width: 100%;
             height: 100%;
             display: flex;
+            background: url("/img/fondo2.jpg")no-repeat fixed;
+            background-size: cover;
+            box-shadow: inset 0 1px 10px rgba(0,0,0,0.5),inset 0 -1px 10px rgba(0,0,0,0.5);
+            @media screen and (max-width: 640px){
+                height: 1700px;
+            }
             h1 {
                 position: absolute;
                 text-align: center;
                 width: 100%;
                 font-size: 45px;
                 top: 60px;
+                color: #308c6a;
+                @media screen and (max-width: 640px){
+                    font-size: 39px;
+                }
             }
             #des-humano{
                 position: absolute;
-                width: 30%;
-                height:10px;
+                width: 100%;
+                text-align: center;
                 top: 130px;
-                font-size: 17px;
-                padding: 16px;
+                font-size: 20px;
+                font-style: italic;
             }           
             .flex-container-des-humano {
                 padding: 0;
@@ -165,23 +266,35 @@ html{
                 width: 100%;
                 position: absolute;
                 top: 180px;
+                left: 0%;
+                @media  screen and (max-width: 640px){
+                    li {
+                        padding-bottom: 40px;
+                    }
+                }
             }
             .flex-item-ter-alte {
-                width: 200px;
+                width: 150px;
                 height: 150px;
             }
             .icono-terapia{
-                width: 100px;  
                 img {
                     width: 50%;
-                }   
+                @media screen and (max-width: 640px){
+                    width: 90%;
+                    }
+                }
             }
             #te-alternas{
                 position: absolute;
-                width: 30%;
+                width: 100%;
+                text-align: center;
                 top: 300px;
-                font-size: 17px;
-                padding: 16px;
+                font-size: 20px;
+                font-style: italic;
+                @media screen and (max-width: 640px){
+                    top: 580px;
+                } 
             }
             .flex-container-ter-alter{
                 padding: 0;
@@ -191,14 +304,29 @@ html{
                 display: -moz-box;
                 display: -ms-flexbox;
                 display: -webkit-flex;
+                display: flex;
                 -webkit-flex-flow: row wrap;
                 justify-content: center;
-                width: 100%;
+                width: 65%;
                 position: absolute;
                 top: 360px;
                 height: 300px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                @media screen and (max-width: 640px){
+                    width: 100%;
+                    height: 1000px;
+                    top: 655px;
+                }
                 img {
                     width: 50%;
+                    @media screen and (max-width: 640px){
+                        width: 90%;
+                        li{
+                            padding-bottom: 40px;
+                        }
+                    }    
                 }
             }
             .fondo-rgba{
@@ -210,6 +338,7 @@ html{
                 top: 0;
                 left: 0;
                 display: none;
+                opacity: 0;
                 .info-terapias{
                     width: 550px;
                     height: 550px;
@@ -217,14 +346,35 @@ html{
                     z-index: 2;
                     background: url("/img/fondo.contacto1.png") no-repeat center;
                     background-size: cover;
-                    top: 100px;
+                    top: 50px;
                     margin: auto;
                     position: relative;
+                    @media screen and (max-width: 768px){
+                        top: 200px;
+                    }
+                    @media screen and (max-width 640px){
+                        border-radius: 0;
+                        width: 80%;
+                        bottom: 2px;
+                        height: 80%;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: 0;
+                    } 
                     .im-cierre{
                         position: absolute;
                         width: 100px;
                         left: 250px;
                         top: 15px;
+                        @media screen and (max-width: 640px){
+                            position: absolute;
+                            width: 80px;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            padding-left: 30px;
+                        }
                         img {
                             width: 60%;
                         }
@@ -256,6 +406,9 @@ html{
             margin: auto;
             background: url("/img/fondo.menu1.png");
             background-size: cover;
+            @media screen and (max-width: 640px){
+                height: 700px;
+            }
             #tit-contacto {
                 position: absolute;
                 width: 100%;
@@ -272,13 +425,17 @@ html{
                 top: 160px;
             }
             .formulario{
-                position: relative;
-                width: 46%;
+                position: absolute;
+                width: 50%;
                 height: 380px;
                 display: flex;
                 top: 250px;
-                /* margin: auto; */
-                left: 30%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                @media screen and (max-width: 640px){
+                        width: 70%;
+                    }
                 #name-form{
                     position: relative;
                     width: 100px;
@@ -298,6 +455,11 @@ html{
                     padding: 5px;
                     margin: auto;
                     color: #4ba55b;
+                    left: 0;
+                    right: 0;
+                    @media screen and (max-width: 640px){
+                        width: 100%;
+                    }
                 }
                 #mail-form{
                     position: absolute;
@@ -305,8 +467,7 @@ html{
                     height: 30px;
                     font-size: 20px;
                     top: 88px;
-                    left: 20px;
-                    }
+                }
                 #mail-text{
                     position: absolute;
                     width: 50%;
@@ -319,21 +480,27 @@ html{
                     font-size: 18px;
                     padding: 5px;
                     color: #4ba55b;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    @media screen and (max-width: 640px){
+                        width: 100%;
+                    }
                 }
                 #boton-enviar{
-                    position: relative;
+                    position: absolute;
                     width: 100px;
                     background-color: #4ba55b;
                     height: 20px;
                     border-radius: 10px;
-                    top: 60px;
-                    right: -18px;
+                    bottom: 50px;
+                    right: 0;
+                    left: 0;
                     text-decoration: none;
                     color: #fff;
                     text-align: center;
                     margin: auto;
                     padding: 9px;
-                    right: 13%;
                 }
                 #telefono {
                     width: 150px;
@@ -395,11 +562,10 @@ html{
                     position: absolute;
                     top: 0;
                     right: 12px;
-                    z-index: 1;
                     color: #4ba55b;
                     line-height: 40px;
                     font-size: 18px;       
-                }
+                }    
                 #lista-terapias{
                     position: relative;
                     background: transparent;
@@ -409,7 +575,6 @@ html{
                     outline: none;
                     color: #4ba55b;
                     cursor: pointer;
-                    z-index: 2;
                     border: none;
                     padding: 10px 10px 10px 5px;
                     text-overflow: '';
@@ -447,10 +612,106 @@ html{
                 }
                 .column-6 {
                     position: absolute;
-                    top: 50%;
-                    width: 52%;
+                    top: 55%;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 50%;
+                    @media screen and (max-width: 640px){
+                        width: 263px;
+                    }
                 }     
-            }   
+            }
+            .titleSocial{
+                position: absolute;
+                background-color: rgba(48,140, 106,0.4);
+                bottom: 0;
+                width: 100%;
+                height: 85px;
+                .social{
+                    text-align: center;
+                    padding-top: 30px;
+                    font-size: 20px;
+                    background: url(../img/ios7-arrow-thin-right.png)no-repeat 35% 20px;
+                    background-size: 45px;
+                    @media screen and (max-width: 640px){
+                        background: url("/img/ios7-arrow-thin-right.png") no-repeat 20% 23px;
+                        background-size: 40px;
+                    }
+                }
+            }
+            .iconSocial{
+                position: absolute;
+                background: #1D4A53;
+                bottom: -85px;
+                width: 100%;
+                height: 85px;
+                display: none;
+                @media screen and (max-width: 640px){
+                        height: 280px;
+                    }
+                .center{
+                    width: 1100px;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    display: block;
+                    @media screen and (max-width: 1024px){
+                        width: 100%;
+                        margin-right: 0px;
+                    }
+                    @media screen and (max-width: 768px){
+                        width: 100%;
+                    }
+                    @media screen and (max-width: 640px){
+                        width: 320px;
+                        margin: auto;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                    }
+                    .contentIcons{
+                        display: -webkit-inline-box;
+                        margin-right: 50px;
+                        padding: 0 50px;
+                        @media screen and (max-width: 1024px){
+                            padding: 0 40px;
+                        }
+                        @media screen and (max-width: 768px){
+                            padding: 0px;
+                        }
+                        a {
+                            text-decoration: none;
+                            .phone{
+                                text-align: left;
+                                padding: 30px;
+                                font-size: 20px;
+                                background: url("../img/icono-call.png") no-repeat 10% 20px;
+                                background-size: 45px;
+                                color: #fff;
+                                padding-left: 87px;
+                            }
+                            .face{
+                                text-align: center;
+                                padding: 30px;
+                                font-size: 20px;
+                                background: url("../img/social-facebook.png") no-repeat 0% 20px;
+                                background-size: 20px;
+                                color: #fff;
+                            }
+                            .ubicacion{
+                                text-align: right;
+                                padding: 30px;
+                                font-size: 20px;
+                                background: url("../img/location.png") no-repeat 4% 20px;
+                                background-size: 26px;
+                                color: #fff;
+                                padding-left: 40px;
+                            }
+                        }    
+                    }
+                }    
+            }       
         }          
     }   
-}                
+}
