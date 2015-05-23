@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -11,10 +12,10 @@
 	<body>
 		<div class="part-1">
 			<ul class="navigation">
-  				<li><a href="#">Home</a></li>
-  				<li><a href="#servicios">Servicios</a></li>
-  				<li><a href="#terapias">Terapias</a></li>
-  				<li><a href="#contacto">Contacto</a></li>
+  				<li class="menu-home"><a href="#">Home</a></li>
+  				<li class="menu-servicio"><a href="#servicios">Servicios</a></li>
+  				<li class="menu-terapias"><a href="#terapias">Terapias</a></li>
+  				<li class="menu-contacto"><a href="#contacto">Contacto</a></li>
 			</ul>
 			<div class="container-part-1">
           <h1 class="title"><span>Centro de atención</span> psicológica y holística IMA</h1>
@@ -30,7 +31,7 @@
 		</section>
 		<section class="part-3" id="servicios">
 			<div class="que-ofrecemos">
-        <h1>Servicios</h1>
+        <h1 class="serv">Servicios</h1>
 	 			<p id="tex-4">Contamos con un equipo de psicólogos profesionales atentos a tus necesidades, dedicados a ayudarte a encontrar la mejor solución para tus problemas, con diversas terapias como son: terapia individual, terapia de pareja, terapia infantil, terapia familiar, tanatología, que se combinan con terapias alternativas como: acupuntura, auriculoterapia, masaje psicoterapéutico, bioenergética, constelaciones familiares, herbolaria,  yoga, meditación, etc. Porque estamos convencidos que todo ser humano necesita paz  interior, salud física y salud mental.</p>
 	 		</div>
 	 	</section>
@@ -193,54 +194,62 @@
  		<section></section>
  			<div class="contacto" id="contacto">
  				<h2 id="tit-contacto">Contacto</h2>
- 				<p id="tex-contacto">Te gustaria sentirte mejor? Agenda una cita con nosotros el día que quieras.</p>
+ 				<p id="tex-contacto"><br>Te gustaria sentirte mejor? <br><br>Agenda una cita con nosotros el día que quieras.</p>
  				<div class="formulario">
-                    <p id="name-form">Nombre</p>
-                    <input type="txt" id="name-text">
-                    <p id="mail-form">Mail</p>
-                    <input type="txt" id="mail-text">
-                    <a href="#" id="boton-enviar">Enviar</a>
-                    <div id="telefono">
-                        <img id="im-tel" src="/img/icono-call.png">
-                        <p id="num">01(55)55675432</p>
-  			        </div>
-                    <a href="https://www.facebook.com/centrocapshi?fref=ts" id="face"><img src="/img/social-facebook.png"></a>
-                    <a href="https://www.here.com/directions/drive/mylocation/Centro-de-Atenci%C3%B3n-Psicologica-y-Holistica-IMA:19.423241,-99.151657?map=19.42324,-99.15166,17,traffic&x=ep"><img id="ubicacion" src="/img/location.png"></a>
-                    <div class="column-6 form-select">
-                        <select name="" id="lista-terapias">
-                            <option value="" disabled="disabled" selected="selected">Nuestras Terapias</option>
-                            <option>Terapia Individual</option>
-                            <option>Terapia de Pareja</option>
-                            <option>Terapia Infantil</option>
-                            <option>Terapia Familiar</option>
-                            <option>Bioenergetica</option>
-                            <option>Auriculoterapia</option>
-                            <option>Masaje Psicoterapeutico</option>
-                            <option>Constelaciones Familiares</option>
-                            <option>Herbolaria</option>
-                            <option>Meditación Zen</option>
-                            <option>Aromaterapia</option>
-                        </select>
-                    </div>
+          <!--p id="name-form">Nombre</p-->
+          <input type="txt" id="name-text" placeholder="Nombre">
+          <!--p id="mail-form">Mail</p-->
+          <input type="txt" id="mail-text" placeholder="Email">
+          <a href="#" id="boton-enviar">Enviar</a>
+          <div class="column-6 form-select">
+              <select name="" id="lista-terapias">
+                  <option value="" disabled="disabled" selected="selected">Nuestras Terapias</option>
+                  <option>Terapia Individual</option>
+                  <option>Terapia de Pareja</option>
+                  <option>Terapia Infantil</option>
+                  <option>Terapia Familiar</option>
+                  <option>Bioenergetica</option>
+                  <option>Auriculoterapia</option>
+                  <option>Masaje Psicoterapeutico</option>
+                  <option>Constelaciones Familiares</option>
+                  <option>Herbolaria</option>
+                  <option>Meditación Zen</option>
+                  <option>Aromaterapia</option>
+              </select>
+          </div>
 
 
-                    <!--select id="list-terapias">
-                        <option>Nuestras Terapias</option>
-                        <option>Terapia Individual</option>
-                        <option>Terapia de Pareja</option>
-                        <option>Terapia Infantil</option>
-                        <option>Terapia Familiar</option>
-                        <option></option>
-                        <option>/option>
-                        <option>Masaje Psicoterapeutico</option>
-                        <option>Constelaciones familiares</option>
-                        <option>Herbolaria</option>
-                        <option></option>
-                        <option>Terapia Floral de Bach</option>
-                        <option>Aromaterapia</option>
-                    </select-->
-                </div>
-            </div>       
+          <!--select id="list-terapias">
+              <option>Nuestras Terapias</option>
+              <option>Terapia Individual</option>
+              <option>Terapia de Pareja</option>
+              <option>Terapia Infantil</option>
+              <option>Terapia Familiar</option>
+              <option></option>
+              <option>/option>
+              <option>Masaje Psicoterapeutico</option>
+              <option>Constelaciones familiares</option>
+              <option>Herbolaria</option>
+              <option></option>
+              <option>Terapia Floral de Bach</option>
+              <option>Aromaterapia</option>
+          </select-->
+          </div>
+          <div class="titleSocial">
+            <p class="social">Redes Sociales</p>
+          </div>
+          <div class="iconSocial">
+            <div class="contentIcons">
+              <a href="" target="blank" class="aSocial"><p class="phone">Tel: 01(55)55675432</p></a>
+            </div>
+            <div class="contentIcons">
+              <a href="https://www.facebook.com/centrocapshi?fref=ts" id="face" target="blank"><p class="face">Facebook</p></a>
+            </div>
+            <div class="contentIcons">
+              <a href="https://www.here.com/directions/drive/mylocation/Centro-de-Atenci%C3%B3n-Psicologica-y-Holistica-IMA:19.423241,-99.151657?map=19.42324,-99.15166,17,traffic&x=ep" target="blank"><p class="ubicacion">Ubicación</p></a>
+            </div>
+          </div>
+        </div>       
 		 </section>	
 	</body>
 </html>
