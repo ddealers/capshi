@@ -31,7 +31,6 @@ $(document).on("ready",
 //------------				
 		$(".boton-terapia-infantil").on("click",
 			function(e){
-				console.log("click");
 				e.preventDefault();
 				TweenLite.to(".ter-infa-juvenil", 0.5, {y: 50, bottom:-50, opacity:1});
 					$(".ter-infa-juvenil").css({display: "block"});
@@ -200,26 +199,10 @@ $(document).on("ready",
 			function(){
 				$("#num").css({display: "none"});
 			});
-//------------	//------------	MENU //------------	//------------	
-	$('.menu-servicio').on('click', function(){
-		$("#servicios").css({opacity: 0, onComplete: function(){
-			TweenLite.to('#servicios', 0.5, {opacity:1});
-		}});
-	});
-	$('.menu-terapias').on('click', function(){
-		$("#terapias").css({opacity: 0, onComplete: function(){
-			TweenLite.to('#terapias', 0.5, {opacity:1});
-		}});
-	});
-	$('.menu-contacto').on('click', function(){
-		$("#contacto").css({opacity: 0, onComplete: function(){
-			TweenLite.to('#contacto', 0.5, {opacity:1});
-		}});
-	});
-	$('.menu-home').on('click', function(){
-		$("#home").css({opacity: 0, onComplete: function(){
-			TweenLite.to('#home', 0.5, {opacity:1});
-		}});
+//------------	//------------	MENU //------------	//------------
+	$('.navigation a').on('click', function(e){
+		var section = $(this).attr('href');
+		TweenLite.from(section, 0.5, {css:{autoAlpha:0}});
 	});
 //------------	//------------	VALIDACION FORM //------------	//------------
 $('#form').submit(function(event) {
@@ -255,6 +238,7 @@ $('#form').submit(function(event) {
 		$form.find('#boton-enviar').prop('disabled', true);
 		return false;
 	});
+<<<<<<< HEAD
 //------------	//------------	FOOTER ICONS //------------	//------------
 	$('.titleSocial').on('mouseover', function(){
 		TweenLite.to('.iconSocial', 0.2, {y: 0, bottom: 0, opacity:1});
@@ -266,5 +250,3 @@ $('#form').submit(function(event) {
 		}});
 	});
 });
-
-
