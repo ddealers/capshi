@@ -235,7 +235,17 @@ $('#form').submit(function(event) {
 			$("#dat-obli").css({display: "none"});
 		}
 
-		$form.find('boton').prop('disabled', true);
+		$form.find('#boton-enviar').prop('disabled', true);
 		return false;
+	});
+//------------	//------------	FOOTER ICONS //------------	//------------
+	$('.titleSocial').on('mouseover', function(){
+		TweenLite.to('.iconSocial', 0.2, {y: 0, bottom: 0, opacity:1});
+		$('.iconSocial').css({display: 'block'});
+	});
+	$(".iconSocial").on("mouseleave", function(e){
+		TweenLite.to(".iconSocial", 0.2, {y: 0, bottom:-85, opacity:0, onComplete: function(){
+			$(".iconSocial").css({display: "none"});
+		}});
 	});
 });
