@@ -238,7 +238,6 @@ $('#form').submit(function(event) {
 		$form.find('#boton-enviar').prop('disabled', true);
 		return false;
 	});
-<<<<<<< HEAD
 //------------	//------------	FOOTER ICONS //------------	//------------
 	$('.titleSocial').on('mouseover', function(){
 		TweenLite.to('.iconSocial', 0.2, {y: 0, bottom: 0, opacity:1});
