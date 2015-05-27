@@ -417,6 +417,16 @@ html{
                 @media screen and (max-width: 640px){
                     width: 70%;
                 }
+                #dat-success{
+                    width: 100%;
+                    margin: auto;
+                    text-align: center;
+                    top: 170px;
+                    color: #4ba55b;
+                    @media screen and (max-width: 640px){
+                        font-size: 14px;
+                    }  
+                }
                 #dat-obli{
                     width: 100%;
                     margin: auto;
@@ -437,8 +447,10 @@ html{
                     margin: 5px auto;
                     color: #4ba55b;
                     box-sizing: border-box;
-                    .rojo{
-                        -webkit-input-placeholder: red;
+                    &.rojo{
+                        &::-webkit-input-placeholder{
+                            color: red;
+                        }
                     }
                     @media screen and (max-width: 640px){
                         width: 100%;
@@ -454,8 +466,29 @@ html{
                     margin: 5px auto;
                     color: #4ba55b;
                     box-sizing: border-box;
-                    .rojo{
-                        -webkit-input-placeholder: red;
+                    &.rojo{
+                        &::-webkit-input-placeholder{
+                            color: red;
+                        }
+                    }
+                    @media screen and (max-width: 640px){
+                        width: 100%;
+                        top: 90px
+                    }
+                }
+                #phone-text{
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 2px solid #4BA55B;
+                    font-size: 18px;
+                    padding: 10px;
+                    margin: 5px auto;
+                    color: #4ba55b;
+                    box-sizing: border-box;
+                    &.rojo{
+                        &::-webkit-input-placeholder{
+                            color: red;
+                        }
                     }
                     @media screen and (max-width: 640px){
                         width: 100%;
@@ -506,12 +539,8 @@ html{
                         -moz-appearance: none;
                         -webkit-appearance: none;
                         font-size: 18px;
-                        &:-moz-focusring {
-                            color: transparent;
-                            text-shadow: 0 0 0 #888888;
-                        }
-                            &::-ms-expand {
-                            display: none;
+                        &.rojo{
+                            color: red;
                         }
                         option[disabled] {
                             color: #eeeeee;
@@ -530,8 +559,10 @@ html{
                     margin: 5px auto;
                     color: #4ba55b;
                     box-sizing: border-box;
-                    .rojo{
-                        -webkit-input-placeholder: red;
+                    &.rojo{
+                        &::-webkit-input-placeholder{
+                            color: red;
+                        }
                     }
                     @media screen and (max-width: 640px){
                         width: 100%;
@@ -539,17 +570,19 @@ html{
                     }
                 }
                 #boton-enviar{
-                    width: 100px;
                     background-color: #4ba55b;
-                    height: 20px;
                     border-radius: 10px;
                     text-decoration: none;
                     color: #fff;
                     text-align: center;
                     font-size: 18px;
                     margin: 15px auto;
-                    padding: 9px;
+                    padding: 9px 20px;
                     display: block;
+                    border: darken(#4ba55b, 2) 3px solid;
+                    &:hover{
+                        background-color: darken(#4ba55b, 3);
+                    }
                 }
             }
         }

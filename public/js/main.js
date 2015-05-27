@@ -205,47 +205,66 @@ $(document).on("ready",
 		TweenLite.from(section, 0.5, {css:{autoAlpha:0}});
 	});
 //------------	//------------	VALIDACION FORM //------------	//------------
-$('#form').submit(function(event) {
-		var $form	= $(this);
-		var name 	= $("#form-name").val();
-		var mail 	= $form.find("#form-mail").val();
+	$('#lista-terapias').on('change', function(){
+		$(this).removeClass("rojo");
+	});
+	$('#submit-form').submit(function() {
+		var $form		= $(this);
+		var name 		= $("#name-text").val();
+		var email 		= $("#mail-text").val();
+		var phone		= $("#phone-text").val();
+		var therapy 	= $("#lista-terapias").val();
 		var nameIsString	= /[A-Za-z\ ]+/.test(name);
 		var emailIsValid	= /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/igm.test(email);
+		var isError 		= false;
 
 		if(!name || !nameIsString){
-			$("#form-name").addClass("rojo");
-			$("form-name").val("");
-			$("#dat-obli").css({display: "block"});
-			return false;
-		}else{
-			$("#dat-obli").css({display: "none"});
+			$("#name-text").addClass("rojo");
+			$("name-text").val("");
+			isError = true;
 		}
 		if(!email|| !emailIsValid){
-			$("#form-mail").addClass("rojo");
-			$("#form-mail").val("");
-			$(".incorrecto").css({display: "block"});
-			$(".vacio").css({display: "none"});
-			$(".correcto").css({display: "none"});
+			$("#mail-text").addClass("rojo");
+			$("#mail-text").val("");
+			isError = true;
+		}
+		if(!phone){
+			$("#phone-text").addClass("rojo");
+			$("#phone-text").val("");
+			isError = true;
+		}
+		if(!therapy){
+			$('#lista-terapias').addClass("rojo");
+			isError = true;
+		}
+		if(isError){
 			$("#dat-obli").css({display: "block"});
 			return false;
 		}else{
-			$(".correcto").css({display: "block"});
-			$(".vacio").css({display: "none"});
-			$(".incorrecto").css({display: "none"});
 			$("#dat-obli").css({display: "none"});
 		}
-
-		$form.find('#boton-enviar').prop('disabled', true);
+		var base64email = "Y2FzcGguaW1hQGdtYWlsLmNvbQ==";
+		var baseURL = "//formspree.io/";
+		$.ajax({
+			url: baseURL + atob(base64email),
+			method: "POST",
+			data: {nombre: name, email: email, telefono: phone, terapia: therapy, _subject: "CAPSHI.COM :: " + name + " desea agendar una cita" },
+			dataType: "json",
+			success: function(){
+				var $p = $("<p id='dat-success'>Tu correo ha sido enviado y tu cita será agendada a la brevedad ¡Buen día!</p>");
+				$form.prepend($p);
+				$p.delay(3000).fadeOut(400, function(){
+					$("#name-text").val('');
+					$("#mail-text").val('');
+					$("#phone-text").val('');
+					$("#lista-terapias").val('');
+					$p.remove();
+				});			
+			},
+			error: function(){
+				alert("No fue posible enviar tu correo, inténtalo nuevamente.");
+			}
+		});
 		return false;
-	});
-//------------	//------------	FOOTER ICONS //------------	//------------
-	$('.titleSocial').on('mouseover', function(){
-		TweenLite.to('.iconSocial', 0.2, {y: 0, bottom: 0, opacity:1});
-		$('.iconSocial').css({display: 'block'});
-	});
-	$(".iconSocial").on("mouseleave", function(e){
-		TweenLite.to(".iconSocial", 0.2, {y: 0, bottom:-85, opacity:0, onComplete: function(){
-			$(".iconSocial").css({display: "none"});
-		}});
 	});
 });
